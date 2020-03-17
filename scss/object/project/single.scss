@@ -1,0 +1,34 @@
+#main.single {
+  width: 800px;
+}
+
+.single {
+  .post {
+    @include mq {
+      padding: 0 12px;
+    }
+  }
+  .post-title {
+    color: $gray_dark;
+    font-size: 1.8em;
+    @include mq {
+      font-size: 1.5em;
+    }
+  }
+  .posted-on {
+    font-size: 1em;
+  }
+  .tags-links {
+    font-size: 1em;
+  }
+  .content-wrap {
+    padding: 8px 0 16px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  p,ul {
+    margin: 0 0 16px;
+  }
+}

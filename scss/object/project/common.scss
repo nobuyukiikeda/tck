@@ -1,0 +1,60 @@
+.wrapper {
+  overflow-x: hidden;
+}
+
+#main {
+  width: 1200px;
+  max-width: 100%;
+  padding: 24px 0 40px;
+  margin: 0 auto;
+  @include mq {
+    padding: 16px 0 24px;
+  }
+}
+
+.entry-content {}
+
+.entry-thumbnail-wrap {}
+
+.entry-thumbnail {
+  width: 100%;
+  height: 240px;
+  background-color: $base;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: all .3s;
+  @include mq(medium) {
+    height: 140px;
+  }
+  &::before {
+    @include ba-block(0, 6px);
+    bottom: 0;
+    left: 0;
+    background-color: $primary;
+    transition: width .3s ease-out;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+  img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .dummy_logo {
+    @include ba-block(50%, 50%);
+    display: none;
+    @include centering-elements;
+    background: url(./img/common/logo_mark.svg) center center no-repeat;
+  }
+}
+
+.thumb-spinner {
+  @include centering-elements;
+}
+
+
+
+
+

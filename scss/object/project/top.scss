@@ -1,0 +1,96 @@
+#main.list-page {
+  width: 1216px;
+  transform: translate(8px, 0);
+}
+
+.list-page {
+  .article-list {
+    display: flex;
+    flex-flow: row wrap;
+    & > article {
+      width: calc( 33.3333% - 16px );
+      margin: 0 16px 24px 0;
+      @include mq(medium) {
+        width: calc( 50% - 16px );
+        margin: 0 16px 16px 0;
+      }
+    }
+  }
+  .entry-title {
+    font-size: 1em;
+    line-height: 1.4;
+    padding: 8px 0 0;
+    @include mq(medium) {
+      padding: 0;
+    }
+    a {
+      color: $gray_dark;
+      transition: color 0.2s;
+      &:hover {
+        color: $primary;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.nav-links {
+  text-align: center;
+  & > span {
+    padding: 0 4px;
+  }
+  & > a {
+    padding: 0 4px;
+  }
+  .prev {
+    position: relative;
+    padding-left: 16px;
+    &::before {
+      @include ba-block(10px, 10px);
+      top: 50%;
+      left: 0;
+      border-top: 1px solid $link;
+      border-left: 1px solid $link;
+      transform: translate(0, -50%) rotate(-45deg);
+      transition: border-color .2s, left .2s;
+    }
+    &:hover::before {
+      left: -4px;
+      border-color: $link_hover;
+    }
+  }
+  .next {
+    position: relative;
+    padding-right: 16px;
+    &::after {
+      @include ba-block(10px, 10px);
+      top: 50%;
+      right: 0;
+      border-bottom: 1px solid $link;
+      border-right: 1px solid $link;
+      transform: translate(0, -50%) rotate(-45deg);
+      transition: border-color .2s, right .2s;
+    }
+    &:hover::after {
+      right: -4px;
+      border-color: $link_hover;
+    }
+  }
+}
+
+.list-page .navigation {
+  transform: translate(-8px , 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

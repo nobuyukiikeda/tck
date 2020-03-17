@@ -1,0 +1,21 @@
+.screen-reader-text {
+  display: inline-block;
+  text-indent: -9999px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.posted-on {
+  color: $gray_middle;
+  font-size: 0.75em;
+}
+
+.tags-links {
+  display: block;
+  font-size: 0.75em;
+  a {
+    display: inline-block;
+    font-weight: bold;
+  }
+}
